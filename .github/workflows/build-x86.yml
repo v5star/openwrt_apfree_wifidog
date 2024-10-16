@@ -26,7 +26,7 @@ jobs:
             git clone https://github.com/openwrt/openwrt.git
             git clone https://github.com/openwrt/packages.git
             git clone https://github.com/openwrt/luci.git
-            git clone https://github.com/jerrykuku/luci-theme-argon.git
+            #git clone https://github.com/jerrykuku/luci-theme-argon.git
             cd packages
             #git checkout chatgpt
             cd ..
@@ -40,7 +40,7 @@ jobs:
             # add the following content to the file
             echo "src-link packages $CUR_DIR/packages" >> feeds.conf.default
             echo "src-link luci $CUR_DIR/luci" >> feeds.conf.default
-            echo "src-link luci-theme-argon $CUR_DIR/luci" >> feeds.conf.default
+            #echo "src-link luci-theme-argon $CUR_DIR/luci" >> feeds.conf.default
             cd openwrt
             #git checkout chatgpt
             # replace the feeds.conf.default file with the content of the file in the current directory
