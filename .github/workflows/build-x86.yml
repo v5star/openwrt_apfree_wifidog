@@ -23,15 +23,14 @@ jobs:
           run: |
             sudo apt-get update
             sudo apt-get install -y build-essential libncurses5-dev gawk git subversion libssl-dev gettext unzip file
-            git clone https://github.com/openwrt/openwrt.git
-            git clone https://github.com/openwrt/packages.git
-            git clone https://github.com/openwrt/luci.git
-            #git clone https://github.com/jerrykuku/luci-theme-argon.git
+            git clone https://github.com/liudf0716/openwrt.git
+            git clone https://github.com/liudf0716/packages.git
+            git clone https://github.com/liudf0716/luci.git
             cd packages
-            #git checkout chatgpt
+            git checkout chatgpt
             cd ..
             cd luci
-            #git checkout chatgpt
+            git checkout chatgpt
             cd ..
             # get current directory and store it in a variable
             CUR_DIR=$(pwd)
@@ -40,9 +39,8 @@ jobs:
             # add the following content to the file
             echo "src-link packages $CUR_DIR/packages" >> feeds.conf.default
             echo "src-link luci $CUR_DIR/luci" >> feeds.conf.default
-            #echo "src-link luci-theme-argon $CUR_DIR/luci" >> feeds.conf.default
             cd openwrt
-            #git checkout chatgpt
+            git checkout chatgpt
             # replace the feeds.conf.default file with the content of the file in the current directory
             cp $CUR_DIR/feeds.conf.default feeds.conf.default
             # cp config.r7800 file in this project to .config 
