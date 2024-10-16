@@ -34,8 +34,7 @@ jobs:
             # add the following content to the file
             echo "src-link packages $CUR_DIR/packages" >> feeds.conf.default
             echo "src-link luci $CUR_DIR/luci" >> feeds.conf.default
-            cd openwrt
-           
+            cd openwrt           
             # replace the feeds.conf.default file with the content of the file in the current directory
             cp $CUR_DIR/feeds.conf.default feeds.conf.default
             # cp config.r7800 file in this project to .config 
@@ -51,7 +50,7 @@ jobs:
             # update feeds
             ./scripts/feeds update -a
             ./scripts/feeds install -a
-
+            
         - name: build openwrt
           run: |
             # get current directory and store it in a variable
