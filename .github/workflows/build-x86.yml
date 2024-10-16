@@ -33,10 +33,10 @@ jobs:
             git clone https://github.com/openwrt/luci.git
             git clone https://github.com/jerrykuku/luci-theme-argon.git
             cd packages
-            git checkout chatgpt
+            #git checkout chatgpt
             cd ..
             cd luci
-            git checkout chatgpt
+            #git checkout chatgpt
             cd ..
             # get current directory and store it in a variable
             CUR_DIR=$(pwd)
@@ -47,7 +47,7 @@ jobs:
             echo "src-link luci $CUR_DIR/luci" >> feeds.conf.default
             echo "src-link luci-theme-argon $CUR_DIR/luci" >> feeds.conf.default
             cd openwrt
-            git checkout chatgpt
+            #git checkout chatgpt
             # replace the feeds.conf.default file with the content of the file in the current directory
             cp $CUR_DIR/feeds.conf.default feeds.conf.default
             # cp config.r7800 file in this project to .config 
