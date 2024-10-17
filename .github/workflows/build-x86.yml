@@ -23,9 +23,9 @@ jobs:
           run: |
             sudo apt-get update
             sudo apt-get install -y build-essential libncurses5-dev gawk git subversion libssl-dev gettext unzip file libjson-c-dev libevent-dev lua5.1 lua5.1-dev nftables libnetfilter-queue-dev
-            git clone https://github.com/liudf0716/openwrt.git
-            git clone https://github.com/liudf0716/packages.git
-            git clone https://github.com/liudf0716/luci.git
+            git clone https://github.com/openwrt/openwrt.git
+            git clone https://github.com/openwrt/packages.git
+            git clone https://github.com/openwrt/luci.git
             
             # get current directory and store it in a variable
             CUR_DIR=$(pwd)
